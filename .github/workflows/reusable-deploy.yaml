@@ -16,7 +16,7 @@ jobs:
 
       - name: Run hello-world action
         id: greet
-        uses: homelab-blgianini/argocd-deploy-action@main
+        uses: homelab-blgianini/argocd-deploy-action@latest
         with:
           nome-aplicacao: ${{ inputs.name }}
           token-argocd: ${{ secrets.ARGO_TOKEN }}
