@@ -18,7 +18,9 @@ jobs:
         id: greet
         uses: homelab-blgianini/argocd-deploy-action@main
         with:
-          who-to-greet: ${{ inputs.name }}
+          nome-aplicacao: ${{ inputs.name }}
+          token-argocd: ${{ secrets.ARGO_TOKEN }}
+
 
       - name: Output greeting time
         run: echo "Greeted at ${{ steps.greet.outputs.time }}"
