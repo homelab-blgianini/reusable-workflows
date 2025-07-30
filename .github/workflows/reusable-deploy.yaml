@@ -19,7 +19,7 @@ jobs:
         uses: homelab-blgianini/argocd-deploy-action@latest
         with:
           nome-aplicacao: ${{ inputs.name }}
-
+          ARGOCD_TOKEN: ${{ secrets.ARGOCD_TOKEN }}
 
       - name: Output greeting time
         run: echo "Greeted at ${{ steps.greet.outputs.time }}"
