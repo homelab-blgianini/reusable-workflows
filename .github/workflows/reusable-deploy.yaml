@@ -6,6 +6,9 @@ on:
       name:
         required: true
         type: string
+    secrets:
+      ARGO_TOKEN:
+        required: true
 
 jobs:
   hello:
